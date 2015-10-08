@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/mainMenu"
+android:background="@color/red">
+	<item android:id="@+id/refresh"
+				android:title="Refresh">
+	</item>
+	<item android:id="@+id/help"
+				android:title="Help">
+	</item>
+	<item android:id="@+id/upgrade"				
+				android:title="Upgrade account">
+	</item>
+	<item android:id="@+id/setting"				
+				android:title="Settings"/>
+	
+</menu>

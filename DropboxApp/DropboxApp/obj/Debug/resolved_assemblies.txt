@@ -1,0 +1,6 @@
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\DropboxApp.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Mono.Android.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Core.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Xml.dll

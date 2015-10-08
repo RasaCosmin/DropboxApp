@@ -16,6 +16,8 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>DropboxApp</AssemblyName>
     <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +49,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FileActivity.cs" />
+    <Compile Include="PhotoActivity.cs" />
+    <Compile Include="FavoritesActivity.cs" />
+    <Compile Include="SettingsActivity.cs" />
+    <Compile Include="InfoAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -61,6 +68,39 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\layout\FileLayout.axml" />
+    <AndroidResource Include="Resources\Drawable\roundShape.xml" />
+    <AndroidResource Include="Resources\layout\ListLayout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\more.png" />
+    <AndroidResource Include="Resources\layout\Popup.axml" />
+    <AndroidResource Include="Resources\values\color_a.xml" />
+    <AndroidResource Include="Resources\menu\mainmenu.xml" />
+    <AndroidResource Include="Resources\menu\menupoint.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\menu\" />
+  </ItemGroup>
 </Project>
