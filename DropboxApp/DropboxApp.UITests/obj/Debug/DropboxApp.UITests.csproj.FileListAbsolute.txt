@@ -1,1 +1,10 @@
-C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\obj\Debug\DropboxApp.UITests.csprojResolveAssemblyReference.cache
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\DropboxApp.UITests.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\DropboxApp.UITests.pdb
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\mscorlib.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\normidna.nlp
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\normnfc.nlp
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\normnfd.nlp
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\normnfkc.nlp
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\bin\Debug\normnfkd.nlp
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\obj\Debug\DropboxApp.UITests.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp.UITests\obj\Debug\DropboxApp.UITests.pdb

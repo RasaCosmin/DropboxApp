@@ -16,8 +16,6 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>DropboxApp</AssemblyName>
     <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,21 +42,40 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FileActivity.cs" />
-    <Compile Include="PhotoActivity.cs" />
-    <Compile Include="FavoritesActivity.cs" />
-    <Compile Include="SettingsActivity.cs" />
-    <Compile Include="InfoAdapter.cs" />
+    <Compile Include="Activities\FavoritesActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\PhotoActivity.cs" />
+    <Compile Include="Activities\PopupActivity.cs" />
+    <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="Helpers\InfoAdapter.cs" />
+    <Compile Include="Helpers\RecycleAdapter.cs" />
+    <Compile Include="Activities\FileActivity.cs" />
+    <Compile Include="Models\Info.cs" />
+    <Compile Include="Models\GetRequest.cs" />
+    <Compile Include="Models\GetResponse.cs" />
+    <Compile Include="Helpers\AutoResizeTextView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -68,39 +85,113 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher1.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher1.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher1.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher2.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher2.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher2.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher2.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher2.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\search.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
     <AndroidResource Include="Resources\layout\FileLayout.axml" />
     <AndroidResource Include="Resources\Drawable\roundShape.xml" />
     <AndroidResource Include="Resources\layout\ListLayout.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\more.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\more.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\more.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\more.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\more.png" />
     <AndroidResource Include="Resources\layout\Popup.axml" />
     <AndroidResource Include="Resources\values\color_a.xml" />
     <AndroidResource Include="Resources\menu\mainmenu.xml" />
     <AndroidResource Include="Resources\menu\menupoint.xml" />
+    <AndroidResource Include="Resources\Drawable\roundLayout.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_star.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_star.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_star.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_star.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_star.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_content_cut.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_delete.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star.png" />
+    <AndroidResource Include="Resources\layout\plusLayout.axml" />
+    <AndroidResource Include="Resources\Drawable\roundButton.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_upload.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_plus.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_plus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_plus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_plus.png" />
+    <AndroidResource Include="Resources\layout\UploadLayout.axml" />
+    <AndroidResource Include="Resources\Drawable\blueButton.xml" />
+    <AndroidResource Include="Resources\Drawable\greenButton.xml" />
+    <AndroidResource Include="Resources\Drawable\backgroundMain.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dots_vertical.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_magnify.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dots.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dropbox.png" />
+    <AndroidResource Include="Resources\Drawable\backgroundButton.xml" />
+    <AndroidResource Include="Resources\Anim\rotate_centre.xml" />
+    <AndroidResource Include="Resources\Anim\rotate_left.xml" />
+    <AndroidResource Include="Resources\Anim\shadow.xml" />
+    <AndroidResource Include="Resources\Anim\shadowMax.xml" />
+    <AndroidResource Include="Resources\layout\PhotoLayout.axml" />
+    <AndroidResource Include="Resources\layout\PhotoLayout1.axml" />
+    <AndroidResource Include="Resources\Drawable\borderShape.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_microscope.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_microscope.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_microscope.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_microscope.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_microscope.png" />
+    <AndroidResource Include="Resources\values\attrs.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\Anim\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:id="@+id/uploadLayoutRelative"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff000000"
+            android:background="@drawable/backgroundbutton" />
+        <TextView
+            android:text="Text File"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ff000000"
+            android:background="@drawable/backgroundbutton" />
+        <TextView
+            android:text="Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:id="@+id/textView3"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ff000000"
+            android:background="@drawable/backgroundbutton" />
+        <ImageButton
+            android:src="@drawable/ic_folder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/textView1"
+            android:id="@+id/folderButton"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bluebutton" />
+        <ImageButton
+            android:src="@drawable/ic_pencil"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/textView2"
+            android:layout_below="@id/folderButton"
+            android:id="@+id/penButton"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/greenbutton" />
+        <ImageButton
+            android:src="@drawable/ic_upload"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/penButton"
+            android:layout_toRightOf="@id/textView3"
+            android:id="@+id/uploadIconbutton"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/roundbutton" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,6 +1,17 @@
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\DropboxApp.dll
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Mono.Android.dll
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Newtonsoft.Json.dll
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Core.dll
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.dll
 C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Xml.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Data.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Mono.Data.Tds.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\Mono.Security.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Transactions.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Xml.Linq.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Numerics.dll
+C:\Users\Testing\Desktop\DropboxApp\DropboxApp\DropboxApp\obj\Debug\assemblies\System.Runtime.Serialization.dll

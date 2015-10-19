@@ -1,1 +1,18 @@
-﻿<Properties StartupItem="DropboxApp.csproj" />
+﻿<Properties StartupItem="DropboxApp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.3230d8078d16305b" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="FileActivity.cs" Line="37" Column="88" />
+      <File FileName="InfoAdapter.cs" Line="66" Column="6" />
+      <File FileName="MainActivity.cs" Line="46" Column="38" />
+      <File FileName="Resources\Drawable\backgroundMain.xml" Line="1" Column="1" />
+      <File FileName="Resources\menu\menupoint.xml" Line="23" Column="5" />
+      <File FileName="Resources\Drawable\backgroundButton.xml" Line="4" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.DropboxApp AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>

@@ -1,0 +1,1 @@
+<resources><attr name="autoScaleTextViewStyle" format="reference" /><declare-styleable name="AutoScaleTextView"><attr name="minTextSize" format="dimension" /><attr name="shrinkTextSize" format="boolean" /></declare-styleable></resources>

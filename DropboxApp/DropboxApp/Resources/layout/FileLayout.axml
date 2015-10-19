@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="110dp"
     android:background="#ffffffff">
     <View
         android:layout_width="70dp"
@@ -10,24 +10,31 @@
         android:id="@+id/viewRound"
         android:background="@drawable/roundShape"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp" />
-    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/viewRound1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp" />
+    <TextView xmlns:tools="http://schemas.android.com/tools"
         android:text="Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/viewRound"
         android:id="@+id/infoText"
         android:textSize="25dip"
-        android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp"
+        tools:visibility="visible" />
     <ImageButton
-        android:src="@drawable/more"
+        android:src="@drawable/ic_dots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/moreButton"
         android:layout_alignParentRight="true"
         android:background="#ffffffff"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="40dp" />
 </RelativeLayout>
