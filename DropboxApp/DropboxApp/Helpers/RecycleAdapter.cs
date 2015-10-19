@@ -56,7 +56,7 @@ namespace DropboxApp
 
 		public override void OnBindViewHolder (RecyclerView.ViewHolder holder, int position)
 		{
-			MyView myHolder = holder as MyView;
+			var myHolder = holder as MyView;
 			myHolder._MainView.Click += mMainView_Click;
 			myHolder._Name.TextSize = 25;
 			myHolder._Name.Text = _Info [position].Name;
